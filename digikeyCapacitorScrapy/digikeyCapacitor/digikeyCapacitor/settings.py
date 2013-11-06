@@ -6,13 +6,11 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #
 
-BOT_NAME = 'tutorial'
+BOT_NAME = 'digikeyCapacitor'
 
-SPIDER_MODULES = ['tutorial.spiders']
-NEWSPIDER_MODULE = 'tutorial.spiders'
+SPIDER_MODULES = ['digikeyCapacitor.spiders']
+NEWSPIDER_MODULE = 'digikeyCapacitor.spiders'
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
 
 # scrapy-mongodb config
 ITEM_PIPELINES = [
@@ -21,7 +19,7 @@ ITEM_PIPELINES = [
 
 MONGODB_URI = 'mongodb://localhost:27017'
 MONGODB_DATABASE = 'test'
-MONGODB_COLLECTION = 'digikeyresistorsscrapy'
+MONGODB_COLLECTION = 'digikeycapacitorsscrapy'
 MONGODB_UNIQUE_KEY = 'digikeyPartNumber'
 MONGODB_ADD_TIMESTAMP = True
 
