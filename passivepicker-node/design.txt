@@ -1,0 +1,34 @@
+TODO:
+
+  Use roo for ruby spreadsheet manipulation (axlsx is write only, Spreadsheet is less popular than roo)
+ 
+
+*********************************************
+DESIGN:
+
+speed up picking resistors and capacitors. 
+
+for digital electronics hobbyists it is tedious choosing a specific capacitor/resistors. 
+instead, just specify:
+  number of units to build (once)
+  a few extras of each componenet (once)
+
+  footprint (once w/ exceptions?? Or need per item)
+  voltage used, i.e. 5v or 3.3v (once w/ exceptions)
+
+  quantity of item per unit (per item)
+  value (per item)
+
+
+  XXX vendor (digikey or mouser to start just show BOM for each) 
+
+
+site will output a specific order w/ cheapest passives fitting the requirements. or instead of creating a web order, create an excel spreadsheet BOM for upload to those sites.
+
+Upload eagle files, it extracts BOM --- Dad's Idea
+
+
+Digikey BOM Format:
+(no headers!)
+Digikey PN
+Quantity
