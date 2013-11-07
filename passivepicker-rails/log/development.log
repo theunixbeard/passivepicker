@@ -1,0 +1,343 @@
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:54:02 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 92ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/foundation-global.
+Load paths:
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/images
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/stylesheets
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/turbolinks-1.3.0/lib/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/jquery-rails-3.0.4/vendor/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets/foundation_and_overrides.scss:2)):
+    14:   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    15: 
+    16:   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    17:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    18:   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    19:     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    20:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:2
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3309399052616170519_70236026015380'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:56:59 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/foundation-global.
+Load paths:
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/images
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/stylesheets
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/turbolinks-1.3.0/lib/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/jquery-rails-3.0.4/vendor/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets/foundation_and_overrides.scss:2)):
+    14:   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    15: 
+    16:   	<title><%= content_for?(:title) ? yield(:title) : "Buy Breakout Boards | breakout.io" %></title>
+    17:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    18:   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    19:     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    20:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:2
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3309399052616170519_70236057864060'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:57:02 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/foundation-global.
+Load paths:
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/images
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/stylesheets
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/turbolinks-1.3.0/lib/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/jquery-rails-3.0.4/vendor/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets/foundation_and_overrides.scss:2)):
+    14:   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    15: 
+    16:   	<title><%= content_for?(:title) ? yield(:title) : "Buy Breakout Boards | breakout.io" %></title>
+    17:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    18:   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    19:     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    20:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:2
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3309399052616170519_70236057864060'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:58:00 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/foundation-global.
+Load paths:
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/images
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/stylesheets
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/turbolinks-1.3.0/lib/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/jquery-rails-3.0.4/vendor/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets/foundation_and_overrides.scss:2)):
+    14:   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    15: 
+    16:   	<title><%= content_for?(:title) ? yield(:title) : "Buy Breakout Boards | breakout.io" %></title>
+    17:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    18:   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    19:     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    20:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:2
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3309399052616170519_70236057864060'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:58:03 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/foundation-global.
+Load paths:
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/images
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/javascripts
+  /Users/primary/programming/breakoutboard_project/breakoutboard.io/vendor/assets/stylesheets
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/turbolinks-1.3.0/lib/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/jquery-rails-3.0.4/vendor/assets/javascripts
+  /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Users/primary/programming/breakoutboard_project/breakoutboard.io/app/assets/stylesheets/foundation_and_overrides.scss:2)):
+    14:   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    15: 
+    16:   	<title><%= content_for?(:title) ? yield(:title) : "Buy Breakout Boards | breakout.io" %></title>
+    17:     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    18:   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    19:     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    20:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:2
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3309399052616170519_70236057864060'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:58:25 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 2636ms
+
+ActionView::Template::Error (Missing partial layout/tracking with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/primary/programming/breakoutboard_project/breakoutboard.io/app/views"
+):
+    23:   <body>
+    24: 
+    25:     <%= yield %>
+    26:     <%= render 'layout/tracking' %>
+    27:   </body>
+    28: </html>
+  app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb__561990169309257965_70209207476340'
+
+
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/primary/.rvm/gems/ruby-2.0.0-p195@railstutorial_rails_4_0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-04 18:58:57 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_tracking.html.erb (0.6ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-04 18:58:57 -0700
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-04 18:58:57 -0700
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-09-04 18:58:57 -0700
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-09-04 18:58:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-07 11:14:25 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_tracking.html.erb (0.5ms)
+Completed 200 OK in 820ms (Views: 802.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:26 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-07 11:14:27 -0800

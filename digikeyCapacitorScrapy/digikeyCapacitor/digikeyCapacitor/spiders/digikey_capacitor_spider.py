@@ -1,19 +1,19 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 
-from tutorial.items import DigikeyResistorItem
+from digikeyCapacitor.items import DigikeyCapacitorItem
 
 from scrapy import log
 from scrapy.http import Request
 import re
 
-class DigikeyResistorSpider(BaseSpider):
-  base_url = "http://www.digikey.com/product-search/en/resistors/chip-resistor-surface-mount/65769?pageSize=500"
-  name = "digikeyResistor"
+class DigikeyCapacitorSpider(BaseSpider):
+  base_url = "http://www.digikey.com/product-search/en/capacitors/ceramic-capacitors/131083?pageSize=500"
+  name = "digikeyCapacitor"
   start_urls = [base_url]
 
   def __init__(self, category=None, *args, **kwargs):
-    super(DigikeyResistorSpider, self).__init__(*args, **kwargs)
+    super(DigikeyCapacitorSpider, self).__init__(*args, **kwargs)
     self.last_page = -1
     self.current_page = 1
 
@@ -33,29 +33,32 @@ class DigikeyResistorSpider(BaseSpider):
       self.last_page = int(re.sub(r'.*/', '', link_text))
     items = []
     # First get all data values
-    resistors = hxs.select("//table[@id='productTable']/tbody/tr")
-    for resistor in resistors:
-      item = DigikeyResistorItem()
-      item['digikeyPartNumber'] = self.xpathClassSelector(resistor, ' digikey-partnumber ', '/a/text()')
-      item['manufacturerPartNumber'] = self.xpathClassSelector(resistor, ' mfg-partnumber ', '/a/span/text()')
-      item['manufacturer'] = self.xpathClassSelector(resistor, ' vendor ', '/span/a/span/text()')
-      item['quantity'] = self.xpathClassSelector(resistor, ' qtyAvailable ', '/text()')
-      item['price'] = self.xpathClassSelector(resistor, ' unitprice ', '/a/text()') 
-      item['minimumQuantity'] = self.xpathClassSelector(resistor, ' minQty ', '/text()') 
-      item['packaging'] = self.xpathClassSelector(resistor, ' packaging ', '/text()[position()=1]') 
-      item['series'] = self.xpathClassSelector(resistor, ' series ', '/a/text()')
-      item['resistance'] = self.xpathClassSelector(resistor, ' CLS 1 ', '/text()')
-      item['tolerance'] = self.xpathClassSelector(resistor, ' CLS 3 ', '/text()') 
-      item['power'] = self.xpathClassSelector(resistor, ' CLS 2 ', '/text()')
-      item['composition'] = self.xpathClassSelector(resistor, ' CLS 174 ', '/text()')
-      item['features'] = self.xpathClassSelector(resistor, ' CLS 5 ', '/text()')
-      item['temperatureCoefficient'] = self.xpathClassSelector(resistor, ' CLS 17 ', '/text()')
-      item['packageCase'] = self.xpathClassSelector(resistor, ' CLS 16 ', '/text()')
-      item['supplierDevicePackage'] = self.xpathClassSelector(resistor, ' CLS 1,291 ', '/text()')
-      item['sizeDimension'] = self.xpathClassSelector(resistor, ' CLS 46 ', '/text()')
-      item['height'] = self.xpathClassSelector(resistor, ' CLS 329 ', '/text()')
-      item['numberOfTerminations'] = self.xpathClassSelector(resistor, ' CLS 1,127 ', '/text()')
-      item['failureRate'] = self.xpathClassSelector(resistor, ' CLS 1,531 ', '/center/text()')
+    capacitors = hxs.select("//table[@id='productTable']/tbody/tr")
+    for capacitor in capacitors:
+      item = DigikeyCapacitorItem()
+      item['digikeyPartNumber'] = self.xpathClassSelector(capacitor, ' digikey-partnumber ', '/a/text()') # same, did it
+      item['manufacturerPartNumber'] = self.xpathClassSelector(capacitor, ' mfg-partnumber ', '/a/span/text()') # same, did it
+      item['manufacturer'] = self.xpathClassSelector(capacitor, ' vendor ', '/span/a/span/text()') # same, did it
+      item['quantity'] = self.xpathClassSelector(capacitor, ' qtyAvailable ', '/text()') # same, did it
+      item['price'] = self.xpathClassSelector(capacitor, ' unitprice ', '/a/text()') # same, did it
+      item['minimumQuantity'] = self.xpathClassSelector(capacitor, ' minQty ', '/text()') # same, did it
+      item['packaging'] = self.xpathClassSelector(capacitor, ' packaging ', '/text()[position()=1]') # same, did it
+      item['series'] = self.xpathClassSelector(capacitor, ' series ', '/a/text()') # same, did it
+      item['capacitance'] = self.xpathClassSelector(capacitor, ' CLS 13 ', '/text()')
+      item['voltageRating'] = self.xpathClassSelector(capacitor, ' CLS 14 ', '/text()')
+      item['tolerance'] = self.xpathClassSelector(capacitor, ' CLS 3 ', '/text()') 
+      item['temperatureCoefficient'] = self.xpathClassSelector(capacitor, ' CLS 17 ', '/text()')
+      item['mountingType'] = self.xpathClassSelector(capacitor, ' CLS 69 ', '/text()')
+      item['operatingTemperature'] = self.xpathClassSelector(capacitor, ' CLS 252 ', '/text()')
+      item['applications'] = self.xpathClassSelector(capacitor, ' CLS 405 ', '/text()')
+      item['ratings'] = self.xpathClassSelector(capacitor, ' CLS 707 ', '/text()')
+      item['packageCase'] = self.xpathClassSelector(capacitor, ' CLS 16 ', '/text()')
+      item['sizeDimension'] = self.xpathClassSelector(capacitor, ' CLS 46 ', '/text()')
+      item['height'] = self.xpathClassSelector(capacitor, ' CLS 1,500 ', '/text()')
+      item['thickness'] = self.xpathClassSelector(capacitor, ' CLS 1,501 ', '/text()')
+      item['leadSpacing'] = self.xpathClassSelector(capacitor, ' CLS 508 ', '/text()')
+      item['features'] = self.xpathClassSelector(capacitor, ' CLS 5 ', '/text()')
+      item['failureRate'] = self.xpathClassSelector(capacitor, ' CLS 1,531 ', '/center/text()')      
       items.append(item)
     # Now determine next request to make
     if self.current_page <= self.last_page:

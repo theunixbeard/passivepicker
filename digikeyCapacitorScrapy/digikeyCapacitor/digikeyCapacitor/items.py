@@ -5,7 +5,7 @@
 
 from scrapy.item import Item, Field
 
-class DigikeyResistorItem(Item):
+class DigikeyCapacitorItem(Item):
 
   digikeyPartNumber = Field() # Important for ordering
   manufacturerPartNumber = Field() # Important for comparing vendors
@@ -15,15 +15,18 @@ class DigikeyResistorItem(Item):
   minimumQuantity = Field() # Important for selection algo
   packaging = Field() 
   series = Field()
-  resistance = Field() # Important
+  capacitance = Field() # Important
+  voltageRating = Field() # Important, somewhat, for selection algo
   tolerance = Field() # May use to filter
-  power = Field() # Important, somewhat, for selection algo
-  composition = Field()
-  features = Field()
   temperatureCoefficient = Field()
-  packageCase = Field()
-  supplierDevicePackage = Field()
+  mountingType = Field()
+  operatingTemperature = Field()
+  applications = Field()
+  ratings = Field()
+  packageCase = Field() # Important, its the size (needs to be parsed)
   sizeDimension = Field()
-  height = Field()
-  numberOfTerminations = Field()
+  height = Field()   
+  thickness = Field()
+  leadSpacing = Field()
+  features = Field()
   failureRate = Field()
