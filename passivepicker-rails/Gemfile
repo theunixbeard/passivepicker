@@ -53,3 +53,6 @@ group :production do
   gem 'rails_12factor' # Needed for Heroku integration
   gem 'unicorn' # Use unicorn instead of Webrick in production
 end
+
+# For renaming
+gem 'rename'

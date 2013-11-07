@@ -1,4 +1,4 @@
-BreakoutboardIo::Application.routes.draw do
+Passivepicker::Application.routes.draw do
 
   root  'static_pages#home'
   

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BreakoutboardIo::Application.config.secret_key_base = 'e1916aa7faacc91c3a18f9d91721d913bb9b16375994df7416e3e874762e7ce7b581677330307e758a6e6c500e0af476e276b7e831a2368177fc79ced2d05b89'
+Passivepicker::Application.config.secret_key_base = 'e1916aa7faacc91c3a18f9d91721d913bb9b16375994df7416e3e874762e7ce7b581677330307e758a6e6c500e0af476e276b7e831a2368177fc79ced2d05b89'
