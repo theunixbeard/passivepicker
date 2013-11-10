@@ -1,2 +1,103 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="row">
+  <div class="large-12 columns">
+    <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
+    <p><%= image_tag "passivepickerCTA.png" %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <a href="#" class="button large expand success round">Upload BOM</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="choiceDiv">
+      <h1 class="choiceHeader">OR</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="questionsDiv">
+      <h3>Answer a few quick questions</h3>
+</div>
+
+<form class="custom">
+  <div class="row">
+    <div class="large-3 columns">
+      <label for="voltageDropdown">Project Voltage</label>
+      <select id="voltageDropdown" class="medium">
+        <option>3.3 Volts</option>
+        <option>5 Volts</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <label for="footprintDropdown">Minimum Footprint Size</label>
+      <select id="footprintDropdown" class="medium">
+        <option>0402</option>
+        <option>0603</option>
+        <option>0805</option>
+        <option>1210</option>
+        <option>Through Hole</option>
+      </select>
+    </div>
+  </div>
+
+  <fieldset id="resistorFieldset">
+    <legend>Resistors</legend>
+
+    <div class="row collapse">
+      <div class="large-2 columns">
+        <input type="text" placeholder="Quantity, ex. &quot;7&quot;">
+      </div>
+      <div class="large-4 columns">
+        <input type="text" placeholder="Resistance, ex. &quot;10M&quot; or &quot;5K&quot; or &quot;470&quot;">
+      </div>
+      <div class="large-6 columns">
+        <a href="javascript:void(0);" class="button postfix addResistor">Add Resistor</a>
+      </div>      
+    </div>
+
+  </fieldset>
+  <fieldset id="capacitorFieldset">
+    <legend>Capacitors</legend>
+
+    <div class="row collapse">
+      <div class="large-2 columns">
+        <input type="text" placeholder="Quantity, ex. &quot;3&quot;">
+      </div>
+      <div class="large-4 columns">
+        <input type="text" placeholder="Capacitance, ex. &quot;15pF&quot; or &quot;0.1uF&quot;">
+      </div>
+      <div class="large-6 columns">
+        <a href="javascript:void(0);" class="button postfix addCapacitor">Add Capacitor</a>
+      </div>      
+    </div>
+
+  </fieldset>
+
+
+</form>
+
+<div class="row">
+  <div class="large-12 columns">
+    <a href="#" class="button large expand round success">Pick Passives</a>
+  </div>
+</div>
+
+<!--
+<hr class="line" />
+<div class="row">
+  <div class="large-12 columns">
+    <a href="#" class="button large expand round">About How We Pick</a>
+  </div>
+</div>
+-->
+
+
+
