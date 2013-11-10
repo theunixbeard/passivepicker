@@ -16,3 +16,5 @@ passivepicker-rails/.bundle
 /passivepicker-rails/tmp
 
 .DS_Store
+*.swp
+*.pyc

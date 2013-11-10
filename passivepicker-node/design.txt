@@ -1,7 +1,14 @@
 TODO:
 
-  Use roo for ruby spreadsheet manipulation (axlsx is write only, Spreadsheet is less popular than roo)
- 
+  - Figure out form submission for first page
+  - Layout 2nd page (just look, no function)
+  - Create backend algorithm to pick components and populate 2nd page table
+      - Mongoid for interfacing w/ MongoDB?
+  - Add in 2nd page ajaxy stuf (i.e. dynamically altering price)
+  - Create buy on Digikey link
+  - Create spreadsheet BOM export using roo for second page
+  - Create spreadsheet BOM import using roo for first page
+  - LAUNCH! (Maybe throw in some enhanced analytics?)
 
 *********************************************
 DESIGN:
