@@ -25,72 +25,59 @@
       <h3>Answer a few quick questions</h3>
 </div>
 
-<form class="custom">
+<%= form_tag '/', class: 'custom' do %>
   <div class="row">
     <div class="large-3 columns">
-      <label for="voltageDropdown">Project Voltage</label>
-      <select id="voltageDropdown" class="medium">
-        <option>3.3 Volts</option>
-        <option>5 Volts</option>
-      </select>
+      <%= label_tag 'voltageDropdown', 'Project Voltage' %>
+      <%= select_tag'voltageDropdown', '<option>3.3 Volts</option><option>5 Volts</option>'.html_safe, class: 'medium' %>
     </div>
   </div>
   <div class="row">
     <div class="large-3 columns">
-      <label for="footprintDropdown">Minimum Footprint Size</label>
-      <select id="footprintDropdown" class="medium">
-        <option>0402</option>
-        <option>0603</option>
-        <option>0805</option>
-        <option>1210</option>
-        <option>Through Hole</option>
-      </select>
+      <%= label_tag 'footprintDropdown', 'Minimum Footprint Size' %>
+      <%= select_tag'footprintDropdown', '<option>0402</option><option>0603</option><option>0805</option><option>1210</option><option>Through Hole</option>'.html_safe, class: 'medium' %>
     </div>
   </div>
 
-  <fieldset id="resistorFieldset">
-    <legend>Resistors</legend>
-        
+  <%= field_set_tag 'Resistors', id: 'resistorFieldset' do %>
     <div class="row collapse">
       <!--
       <small class="error">Invalid entry: Quantity must be blah, resistance must be</small>
       -->
       <div class="large-2 columns">
-        <input type="text" placeholder="Quantity, ex. &quot;7&quot;">
+        <%= text_field_tag 'resistorQuantity1', nil, placeholder: 'Quantity, ex. "7"' %>
       </div>
       <div class="large-4 columns">
-        <input type="text" placeholder="Resistance, ex. &quot;10M&quot; or &quot;5K&quot; or &quot;470&quot;">
+        <%= text_field_tag 'resistorValue1', nil, placeholder: 'Resistance, ex. "10M" or "5K" or "470"' %>
       </div>
       <div class="large-6 columns">
-        <a href="javascript:void(0);" class="button postfix addResistor">Add Resistor</a>
+        <%= content_tag(:a, 'Add Resistor', class: 'button postfix addResistor', href: 'javascript:;') %>
       </div>      
     </div>
-  </fieldset>
-  <fieldset id="capacitorFieldset">
-    <legend>Capacitors</legend>
-
+  <% end %>
+  <%= field_set_tag 'Capacitors', id: 'capacitorFieldset' do %>
     <div class="row collapse">
       <div class="large-2 columns">
-        <input type="text" placeholder="Quantity, ex. &quot;3&quot;">
+        <%= text_field_tag 'capacitorQuantity1', nil, placeholder: 'Quantity, ex. "3"' %>
       </div>
       <div class="large-4 columns">
-        <input type="text" placeholder="Capacitance, ex. &quot;15pF&quot; or &quot;0.1uF&quot;">
+        <%= text_field_tag 'capacitorValue1', nil, placeholder: 'Capacitance, ex. "15pF" or "0.1uF"' %>
       </div>
       <div class="large-6 columns">
-        <a href="javascript:void(0);" class="button postfix addCapacitor">Add Capacitor</a>
+        <%= content_tag(:a, 'Add Resistor', class: 'button postfix addCapacitor', href: 'javascript:;') %>
       </div>      
     </div>
+  <% end %>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= submit_tag 'Pick Passives', class: 'button large expand round success' %>
+    </div>
+  </div> 
+<% end %>
 
-  </fieldset>
 
 
-</form>
 
-<div class="row">
-  <div class="large-12 columns">
-    <a href="#" class="button large expand round success">Pick Passives</a>
-  </div>
-</div>
 
 <!--
 <hr class="line" />

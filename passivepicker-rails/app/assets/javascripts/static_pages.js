@@ -50,10 +50,12 @@ function addRowToCategory(jqEvent) {
     // Check if valid capacitor
     $('#capacitorFieldset').append(capacitorRow);
     $(".addCapacitor").on("click", addRowToCategory);
+    success = true;
   } else if($(jqEvent.currentTarget).hasClass("addResistor")){
     // Check if valid resistor
     $('#resistorFieldset').append(resistorRow);
     $(".addResistor").on("click", addRowToCategory);
+    success = true;
   }
   if(success) {
     $(jqEvent.currentTarget).hide();

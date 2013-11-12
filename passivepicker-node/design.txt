@@ -1,8 +1,12 @@
 TODO:
 
+  - Think about algorithm. What kind of queries will I need to make? What would be a good model for that? What kind of controller should I have? Probably multiple models, 1 controller?
   - Figure out form submission for first page
+     - Create controller to handle picking, have form submit to it. See what gets passed in!
+     - Fix javascript to dynamically create new lines in form with new railisms (ids wrong)
   - Layout 2nd page (just look, no function)
   - Create backend algorithm to pick components and populate 2nd page table
+      - Or should we port the data to Postgres and use that instead?
       - Mongoid for interfacing w/ MongoDB?
   - Add in 2nd page ajaxy stuf (i.e. dynamically altering price)
   - Create buy on Digikey link
