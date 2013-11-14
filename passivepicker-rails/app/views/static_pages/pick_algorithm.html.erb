@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Goals</h1>
+    <p>The goal of PassivePicker is to attempt to capture the thought process that hobbyists go through when they spend the ~1-2hrs each project picking out specific models of resistors and capacitors. Do you really care whether your 1K ohm resistor is a Yageo or a Murata? We don't think so. Below you will find a summary of the algorithm we use to pick components. And please provide feedback to ben@passivepicker.com! Just remember that we are shooting for a simple tool to cover the 95% use-case, not a be-all end-all one stop shop. That's what the Digikey/Mouser/Octopart parametric search tools are for.</p>
+    <h1>Resistors</h1>
+    <p>Other than matching your requested quantity/resistance value we consider power rating, tolerance, footprint and price.</p>
+    <h3>Minimum Safe Power Rating</h3>
+    <p>For determining the minimum safe power rating (i.e. how much power can flow through the resistor without frying it) we use trusty Ohm's law. Given V=IR and VI=P, we can substitute for the more useful V^2/R = P. Since we know your project's voltage (5 or 3.3) and the resistance of that particular resistor, we can worst-case-estimate how much power that resistor might be exposed to. So for a 470ohm resistor at 5V the most power it could be exposed to is 5*5/470 = 0.053, or ~1/20W. Given that most resistors have a power rating of at least double that, it turns out that power rating is almost a non-issue for hobbyist digital electronics projects. But even so, our algorithm is smart enough to avoid doing anything <i>incredibly</i> stupid.</p>
+    <h3>Tolerance</h3>
+    <p>For the vast majority of cases, our algorithm tries to pick 1% tolerance or better resistors. We've found this to be a happy medium, where prices are still low but the tolerance is good enough to work in almost all designs. If we really have to, the algorithm will go as high as 5% tolerance. Any higher and we will still pick a resistor for you, but there will be a warning on the final BOM.</p>
+    <h1>Capacitors</h1>
+    <p>Other than matching your requested quantity/capacitance value we consider voltage rating, tolerance, footprint and price.</p>
+    <h3>Minimum Voltage Rating</h3>
+    <p>This is an easy one to pick, we just follow the rule of thumb to have a 2X project voltage rating. So, if your project is 5V we will pick a capacitor with a 10V or higher voltage rating. In general, capacitor response time slows down as the voltage rating goes up, but in practice for digital electronics even a 100V-rated capacitor will perform fine.</p>
+    <h3>Tolerance</h3>
+    <p>For capacitor tolerance our algorithm tries to shoot for 10% tolerance or better. With that said, we go as high as 20% tolerance without annoying you with a warning. Unless you are doing some fine-tuned precision analog stuff tolerance usually doesn't matter.</p>
+    <h1>Other Information</h1>
+    <h3>Footprints</h3>
+    <p>For footprints, we will stick to the inputted minimum size unless it isn't viable. For example, trying to find a 33uF capacitor in 0402 just doesn't work. In that case we'd bump up to an 0603 and provide a notice on the BOM so you can adjust your footprint accordingly. </p>
+    <h3>Price</h3>
+    <p>Cheaper the better! With that said, we always take into consideration the standards described above, so don't worry we won't shaft you with a &plusmn;30% 1mW resistor just to save $0.03!</p>
+    </br>
+    <p>We'd also like to thank <a href="http://dangerousprototypes.com">Dangerous Prototypes</a>, who in addition to being an awesome resource in general, actually inspired this project with their <a href="http://dangerousprototypes.com/docs/Partlist">Partlist</a> blog posts!
+  </div>
+</div>

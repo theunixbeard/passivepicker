@@ -3,4 +3,6 @@ class StaticPagesController < ApplicationController
   end
   def about
   end
+  def pick_algorithm
+  end
 end

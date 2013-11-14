@@ -12,6 +12,8 @@ TODO:
   - Create buy on Digikey link
   - Create spreadsheet BOM export using roo for second page
   - Create spreadsheet BOM import using roo for first page
+  - PR Plan:
+    - OS Hardware kits: Often if a cart is given, the specific passive is OOS. Find a specific example of this. Then show how to use passive picker to solve this issue. (ideally by submitting a cart link to passivepicker.com which can detect whats unavailable and suggest substitutes)
   - LAUNCH! (Maybe throw in some enhanced analytics?)
 
 *********************************************
