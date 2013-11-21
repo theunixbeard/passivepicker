@@ -18,3 +18,6 @@ passivepicker-rails/.bundle
 .DS_Store
 *.swp
 *.pyc
+
+# Ignore mongodb data dump
+13-11-18-mongo-dump
