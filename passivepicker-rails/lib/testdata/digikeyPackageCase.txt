@@ -1,0 +1,136 @@
+-
+Surface Mount, MLCC
+01005 (0402 Metric)
+Surface Mount, MLCC
+0201 (0603 Metric)
+Surface Mount, MLCC
+0204 (0510 Metric)
+Surface Mount, MLCC
+0204 (0610 Metric)
+Surface Mount, MLCC
+0306 (0816 Metric)
+Surface Mount, MLCC
+0402 (1005 Metric)
+Surface Mount, MLCC
+0504 (1210 Metric)
+Surface Mount, MLCC
+0505 (1313 Metric)
+Surface Mount, MLCC
+0508 (1220 Metric)
+Surface Mount, MLCC
+0603 (1608 Metric)
+Surface Mount, MLCC
+0603 (1608 Metric) Wide (Long Side), 0306 (0816 Metric)
+Surface Mount, MLCC
+0605 (1613 Metric)
+Surface Mount, MLCC
+0606 (1616 Metric)
+Surface Mount, MLCC
+0612 (1632 Metric)
+Surface Mount, MLCC
+0709 (1823 Metric)
+Surface Mount, MLCC
+0805 (2012 Metric)
+Surface Mount, MLCC
+1005 (2512 Metric)
+Surface Mount, MLCC
+1111 (2828 Metric)
+Surface Mount, MLCC
+1206 (3216 Metric)
+Surface Mount, MLCC
+1210 (3225 Metric)
+Surface Mount, MLCC
+1410 (3524 Metric)
+Surface Mount, MLCC
+1805 (4512 Metric)
+Surface Mount, MLCC
+1808 (4520 Metric)
+Surface Mount, MLCC
+1812 (4532 Metric)
+Surface Mount, MLCC
+1825 (4564 Metric)
+Surface Mount, MLCC
+2-DIP
+Through Hole
+2-Non Standard SMD, J-Lead
+Surface Mount, MLCC
+2-SMD
+Surface Mount, MLCC
+2211 (5728 Metric)
+Surface Mount, MLCC
+2220 (5650 Metric)
+Surface Mount, MLCC
+2220 (5750 Metric)
+Surface Mount, MLCC
+2225 (5763 Metric)
+Surface Mount, MLCC
+2325 (5864 Metric)
+Surface Mount, MLCC
+2420 (6050 Metric)
+Surface Mount, MLCC
+3025 (7563 Metric)
+Surface Mount, MLCC
+3040 (7610 Metric)
+Surface Mount, MLCC
+3640 (9110 Metric)
+Surface Mount, MLCC
+3838 (9797 Metric)
+Surface Mount, MLCC
+4044 (1011 Metric)
+Surface Mount, MLCC
+6-DIP
+Through Hole
+6-SMD
+Surface Mount, MLCC
+8-DIP
+Through Hole
+Axial
+Through Hole
+Axial, Can
+Through Hole
+Button
+Requires Holder
+Disk, Metal Fitting
+Requires Holder
+Disk, Metal Fitting - Threaded
+Requires Holder
+Non-Standard SMD
+Surface Mount, MLCC
+Non-Standard, Tabbed
+Chassis Mount
+Radial
+Through Hole
+Radial, Disc
+Through Hole
+SMD, J-Lead
+Surface Mount, MLCC
+Stacked DIP, 10 Lead
+Through Hole
+Stacked DIP, 20 Lead
+Through Hole
+Stacked DIP, 6 Lead
+Through Hole
+Stacked DIP, 8 Lead
+Through Hole
+Stacked SMD, 10 J-Lead
+Surface Mount, MLCC
+Stacked SMD, 10 L-Lead
+Surface Mount, MLCC
+Stacked SMD, 2 J-Lead
+Surface Mount, MLCC
+Stacked SMD, 2 L-Lead
+Surface Mount, MLCC
+Stacked SMD, 20 J-Lead
+Surface Mount, MLCC
+Stacked SMD, 20 L-Lead
+Surface Mount, MLCC
+Stacked SMD, 4 J-Lead
+Surface Mount, MLCC
+Stacked SMD, 6 J-Lead
+Surface Mount, MLCC
+Stacked SMD, 6 L-Lead
+Surface Mount, MLCC
+Stacked SMD, 8 J-Lead
+Surface Mount, MLCC
+Stacked, SMD J-Lead
+Surface Mount, MLCC

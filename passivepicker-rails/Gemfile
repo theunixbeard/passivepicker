@@ -18,6 +18,10 @@ end
 
 # Non-Default Gems
 
+# For importing mongoDB data
+gem 'mongo'
+gem 'bson_ext'
+
 # Foundation Gems
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.3.0'

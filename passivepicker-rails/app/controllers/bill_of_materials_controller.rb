@@ -1,0 +1,2 @@
+class BillOfMaterialsController < ApplicationController
+end

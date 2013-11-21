@@ -11,6 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131119041700) do
+
+  create_table "capacitors", force: true do |t|
+    t.string   "vendor_part_number"
+    t.string   "manufacturer_part_number"
+    t.decimal  "capacitance"
+    t.decimal  "voltage_rating"
+    t.decimal  "tolerance"
+    t.string   "footprint"
+    t.decimal  "price"
+    t.integer  "minimum_quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resistors", force: true do |t|
+    t.string   "vendor_part_number"
+    t.string   "manufacturer_part_number"
+    t.decimal  "resistance"
+    t.integer  "power_rating"
+    t.decimal  "tolerance"
+    t.string   "footprint"
+    t.decimal  "price"
+    t.integer  "minimum_quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

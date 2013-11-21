@@ -1,28 +1,56 @@
-== README
+TODO:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  - Script to convert mongoDB to PostgreSQL DB, and convert strings to numbers etc.
+     - Create rake task to do data conversion
+     - Rake task uses model methods
+     - Model method tested via rspec
+  - Figure out form submission for first page
+     - Create controller to handle picking, have form submit to it. See what gets passed in!
+     - Fix javascript to dynamically create new lines in form with new railisms (ids wrong)
+  - Layout 2nd page (just look, no function)
+  - Create backend algorithm to pick components and populate 2nd page table
+      - Or should we port the data to Postgres and use that instead?
+      - Mongoid for interfacing w/ MongoDB?
+  - Add indices to relevant DB columns
+  - Add in 2nd page ajaxy stuf (i.e. dynamically altering price)
+  - Create buy on Digikey link
+  - Create spreadsheet BOM export using roo for second page
+  - Create spreadsheet BOM import using roo for first page
+  - PR Plan:
+    - OS Hardware kits: Often if a cart is given, the specific passive is OOS. Find a specific example of this. Then show how to use passive picker to solve this issue. (ideally by submitting a cart link to passivepicker.com which can detect whats unavailable and suggest substitutes)
+  - LAUNCH! (Maybe throw in some enhanced analytics?)
 
-Things you may want to cover:
+*********************************************
+General DESIGN:
 
-* Ruby version
+speed up picking resistors and capacitors. 
 
-* System dependencies
+for digital electronics hobbyists it is tedious choosing a specific capacitor/resistors. 
+instead, just specify:
+  number of units to build (once)
+  a few extras of each componenet (once)
 
-* Configuration
+  footprint (once w/ exceptions?? Or need per item)
+  voltage used, i.e. 5v or 3.3v (once w/ exceptions)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  quantity of item per unit (per item)
+  value (per item)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  XXX vendor (digikey or mouser to start just show BOM for each) 
+
+
+site will output a specific order w/ cheapest passives fitting the requirements. or instead of creating a web order, create an excel spreadsheet BOM for upload to those sites.
+
+Upload eagle files, it extracts BOM --- Dad's Idea
+
+
+Digikey BOM Format:
+(no headers!)
+Digikey PN
+Quantity
+
+
+*******************************************
+Rails Design:
+

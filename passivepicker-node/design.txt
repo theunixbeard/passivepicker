@@ -1,6 +1,7 @@
 TODO:
 
   - Think about algorithm. What kind of queries will I need to make? What would be a good model for that? What kind of controller should I have? Probably multiple models, 1 controller?
+  - Script to convert mongoDB to PostgreSQL DB, and convert strings to numbers etc.
   - Figure out form submission for first page
      - Create controller to handle picking, have form submit to it. See what gets passed in!
      - Fix javascript to dynamically create new lines in form with new railisms (ids wrong)
