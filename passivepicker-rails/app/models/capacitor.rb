@@ -51,15 +51,50 @@ class Capacitor < ActiveRecord::Base
     return nil
   end
 
-  def analyze_tolerance tolerance
-
+  # Need capacitance to convert absolute tolerances to percentage based
+  #capacitance passed in should be in BigDecimal form
+  def analyze_tolerance tolerance, capacitance
+    #of form '-20%, +80%' (if 2 matches) or '±2.5%' (if 1 match)
+    tolerance_percentage = BigDecimal.new(0)
+    matched = false
+    tolerance.scan(/(\d+\.?\d*)%/) do |match|
+      matched = true
+      new_percentage = BigDecimal.new(match[0])
+      if new_percentage > tolerance_percentage
+        tolerance_percentage = new_percentage
+      end
+    end
+    if matched
+      return (tolerance_percentage / 100)
+    end
+    #of form '±0.05pF', need to do percentage based math with capacitance
+    absolute = analyze_capacitance tolerance
+    if absolute
+      return (absolute / capacitance)
+    end
+    return nil
   end
 
   def analyze_price price
-
+    price.gsub! ',', ''
+    /(\d+\.?\d*)/.match(price) do |m|
+      return BigDecimal.new(m[1])
+    end
+    return nil
   end
 
   def analyze_minimum_quantity minimum_quantity
-
+    actual_minimum_quantity = nil
+    minimum_quantity.map { |i| i.gsub! ',', '' }
+    minimum_quantity.each do |q|
+      /(\d+)/.match(q) do |m|
+        actual_minimum_quantity = m[1].to_i
+      end
+      /Non-Stock/.match(q) do |m|
+        # Don't include in non-stock
+        return nil
+      end
+    end
+    return actual_minimum_quantity
   end
 end

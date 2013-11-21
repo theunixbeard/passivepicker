@@ -9,8 +9,6 @@ TODO:
      - Fix javascript to dynamically create new lines in form with new railisms (ids wrong)
   - Layout 2nd page (just look, no function)
   - Create backend algorithm to pick components and populate 2nd page table
-      - Or should we port the data to Postgres and use that instead?
-      - Mongoid for interfacing w/ MongoDB?
   - Add indices to relevant DB columns
   - Add in 2nd page ajaxy stuf (i.e. dynamically altering price)
   - Create buy on Digikey link
